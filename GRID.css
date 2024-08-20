@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root{
+    --corAzul: #0044AF;
+    --corVermelho: #FF0122;
+    --corAmarelo: #FFAF00;
+}
+#vertical{
+    width: 400px;
+    height: 350px;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(3.33%);
+}
+#vertical .container{
+    width: 400px;
+    height: 350px;
+    /*Definido Grid*/
+    display: grid;
+    /*define o padrão de colunas-repetir(numCol,tam)*/
+    grid-template-columns: repeat(3,33%);
+    /*define o padrão de linhas-repetir(numlin,tam)*/
+    grid-template-rows: repeat(1,350px);
+    /*define o espacamento entre colunas e linhas*/
+    grid-column-gap: 1px ;
+    grid-row-gap: 1px ;
+}
+#vertical .container .item1{
+    background-color: var(--corAmarelo);
+}
+#vertical .container .item2{
+    background-color: var(--corAzul);
+}
+#vertical .container .item3{
+    background-color: var(--corVermelho);
+}
+#horizontal{
+    width: 400px;
+    height: 350px;
+    display: grid;
+    padding: 20px;
+    grid-template-rows: repeat(3.33%);
+}
+#horizontal .container{
+    width: 400px;
+    height: 350px;
+    /*Definido Grid*/
+    display: grid;
+    /*define o padrão de colunas-repetir(numCol,tam)*/
+    grid-template-columns: repeat(1,440px,);
+    /*define o padrão de linhas-repetir(numlin,tam)*/
+    grid-template-rows: repeat(3,33.3%);
+    /*define o espacamento entre colunas e linhas*/
+    grid-column-gap: 1px ;
+    grid-row-gap: 1px ;
+}
+#horizontal .container .item1{
+    background-color: var(--corAmarelo);
+}
+#horizontal .container .item2{
+    background-color: var(--corAzul);
+}
+#horizontal .container .item3{
+    background-color: var(--corVermelho);
+}
