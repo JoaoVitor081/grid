@@ -1,68 +1,96 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.container{
+    display: grid;
+    height: 400px;
+    grid-template-columns: repeat(1,auto);
+    grid-template-rows: repeat(3,auto);
+    background-color: var(--black);
 }
 :root{
-    --corAzul: #0044AF;
-    --corVermelho: #FF0122;
-    --corAmarelo: #FFAF00;
+    --gold: rgb(156, 141, 101);
+    --black: rgb(0, 0, 0);
+    --red: red;
 }
-#vertical{
-    width: 400px;
-    height: 350px;
+
+header{
+    height: 550px;
+    grid-template-rows: (1,auto);
+    background-image: url(./9edf816d-5625-45d2-9ef6-8b2ae65bb7eaCover_Elder-Ring.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 100%;
+}
+header h1{
+    color: var(--gold);
+    font-size: 80px;
+    position: relative;
+    left: 370px;
+    top: 300px;
+
+}
+main{
+    height: 700px;
+    grid-template-rows: auto;
+    
+
+
+}
+main img{
+    position: relative;
+    left: 120px;
+}
+main p{
+    color: var(--red);
+    font-size: 20px;
+}
+main h1{
+    font-size: 50px;
+    color: var(--red);
+
+}
+
+footer{
     display: grid;
-    padding: 20px;
-    grid-template-columns: repeat(3.33%);
+    grid-template-columns: repeat(3,33.3%);
+    grid-template-rows: repeat(1,auto);
+    gap: 2px;
+    position: relative;
+    top: 250px;
 }
-#vertical .container{
-    width: 400px;
-    height: 350px;
-    /*Definido Grid*/
-    display: grid;
-    /*define o padrão de colunas-repetir(numCol,tam)*/
-    grid-template-columns: repeat(3,33%);
-    /*define o padrão de linhas-repetir(numlin,tam)*/
-    grid-template-rows: repeat(1,350px);
-    /*define o espacamento entre colunas e linhas*/
-    grid-column-gap: 1px ;
-    grid-row-gap: 1px ;
+.container footer .left-footer{
+    height: 470px;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-row-end: 4;
+    grid-column-end: 2;   
 }
-#vertical .container .item1{
-    background-color: var(--corAmarelo);
+.container footer .center-footer{
+    height: 470px;
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-row-end: 4;
+    grid-column-end: 3;   
 }
-#vertical .container .item2{
-    background-color: var(--corAzul);
+.container footer .right-footer{
+    height: 470px;
+    grid-row-start: 3;
+    grid-column-start: 3;
+    grid-row-end: 4;
+    grid-column-end: 4;   
 }
-#vertical .container .item3{
-    background-color: var(--corVermelho);
+section img{
+    position: relative;
+    left: 20px;
+    top: 10pxs;
 }
-#horizontal{
-    width: 400px;
-    height: 350px;
-    display: grid;
-    padding: 20px;
-    grid-template-rows: repeat(3.33%);
+section h1{
+    color: var(--red);
+    font-size: 25px;
+    position: relative;
+    left: 20px;
 }
-#horizontal .container{
-    width: 400px;
-    height: 350px;
-    /*Definido Grid*/
-    display: grid;
-    /*define o padrão de colunas-repetir(numCol,tam)*/
-    grid-template-columns: repeat(1,440px,);
-    /*define o padrão de linhas-repetir(numlin,tam)*/
-    grid-template-rows: repeat(3,33.3%);
-    /*define o espacamento entre colunas e linhas*/
-    grid-column-gap: 1px ;
-    grid-row-gap: 1px ;
-}
-#horizontal .container .item1{
-    background-color: var(--corAmarelo);
-}
-#horizontal .container .item2{
-    background-color: var(--corAzul);
-}
-#horizontal .container .item3{
-    background-color: var(--corVermelho);
+section p{
+    color: var(--gold);
+    font-size: 15px;
+    position: relative;
+    left: 5px;
 }
